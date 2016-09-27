@@ -302,12 +302,7 @@ productCategoryRouteConfig.prototype.addRoutes = function () {
         requestUrl : "/editDeck/:deckId",
         callbackFunction : function(request, response){
 
-            if(request.app.get('bs')["_json"]["roles"][0]=="admin"){
-                response.render("editDeck", { title : "Edit Deck"})
-            } else{
-                response.redirect(self.redirectRoute);
-            }
-
+            console.log(request.app.get('bs'))
 
         }
     });

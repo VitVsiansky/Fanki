@@ -301,8 +301,11 @@ productCategoryRouteConfig.prototype.addRoutes = function () {
         requestType : "get",
         requestUrl : "/editDeck/:deckId",
         callbackFunction : function(request, response){
-                response.render("editDeck", { Bullshit: request.app.get('bs')})
-   }
+
+                response.render("editDeck", {Bullshit: request.app.get('bs')}["_json"]["roles"]);
+
+
+        }
     });
 
     self.routeTable.push({

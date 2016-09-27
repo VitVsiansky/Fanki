@@ -302,7 +302,7 @@ productCategoryRouteConfig.prototype.addRoutes = function () {
         requestUrl : "/editDeck/:deckId",
         callbackFunction : function(request, response){
 
-                response.render("editDeck", {Bullshit: request.app.get('bs')}["_json"]["roles"]);
+                response.render("editDeck", {Bullshit: request.app.get('bs')["_json"]["roles"]});
 
 
         }
